@@ -30,5 +30,5 @@
 }
 
  body {
-     background-image: asset-url("bgpaper.gif");
+     background-image: url(asset-path('bgpaper.gif'));
  }
