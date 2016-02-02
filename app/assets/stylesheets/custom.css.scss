@@ -14,7 +14,7 @@
     
     h1 {
         font-family: 'Droid Sans', sans-serif;
-        font-weight:bold;
+        font-weight:700;
         margin-bottom:0px;
         margin-top:50px;
         font-size:420%;
@@ -30,5 +30,5 @@
 }
 
  body {
-     background-image: image-url("bgpaper.gif");
+     background-image: asset-url("bgpaper.gif", image);
  }
