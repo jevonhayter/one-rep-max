@@ -2,3 +2,15 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+
+#top-main{
+     
+    height:500px;
+    
+    h1 {
+        font-family: 'Droid Sans', sans-serif;
+        font-weight:bold;
+    }
+}
