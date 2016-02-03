@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @exercise.date %>
+</p>
+
+<p>
+  <strong>Exercise:</strong>
+  <%= @exercise.exercise %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @exercise.weight %>
+</p>
+
+<p>
+  <strong>Max:</strong>
+  <%= @exercise.max %>
+</p>
+
+<p>
+  <strong>Bulk:</strong>
+  <%= @exercise.bulk %>
+</p>
+
+<p>
+  <strong>Tone:</strong>
+  <%= @exercise.tone %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @exercise.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Back', exercises_path %>

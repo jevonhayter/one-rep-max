@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-02-03
+  exercise: MyString
+  weight: 
+  max: 1
+  bulk: 1
+  tone: 1
+  user_id: 1
+
+two:
+  date: 2016-02-03
+  exercise: MyString
+  weight: 
+  max: 1
+  bulk: 1
+  tone: 1
+  user_id: 1
