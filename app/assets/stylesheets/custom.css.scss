@@ -5,12 +5,18 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
 
 #top-main{
      
-    height:500px;
+    height:auto;
      
-     
+    background-image: url(asset-path('bgpaper.gif')); 
     
     h1 {
         font-family: 'Droid Sans', sans-serif;
@@ -37,11 +43,23 @@
         }
     
     #FormID{
-        margin-top:80px;
+        margin-top:30px;
         font-size:150%;
     }
 }
 
- body {
-     background-image: url(asset-path('bgpaper.gif'));
- }
+ //body {
+    // background-image: url(asset-path('bgpaper.gif'));
+ //}
+ 
+#main-bottom {
+    
+height:auto;
+background-color:#fff;
+        
+} 
+
+.instructions {
+    margin-top:65px;
+}
+ 
