@@ -3,7 +3,8 @@
 one:
   date: 2016-02-03
   exercise: MyString
-  weight: 
+  weight: 1
+  reps: 1
   max: 1
   bulk: 1
   tone: 1
@@ -12,7 +13,8 @@ one:
 two:
   date: 2016-02-03
   exercise: MyString
-  weight: 
+  weight: 1
+  reps: 1
   max: 1
   bulk: 1
   tone: 1
