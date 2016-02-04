@@ -4,7 +4,7 @@ class ExercisesController < ApplicationController
   # GET /exercises
   # GET /exercises.json
   def index
-    @exercises = Exercise.all.order("created_at DESC")
+    @exercises = Exercise.order("created_at DESC").paginate(page: params[:page])
   end
 
   # GET /exercises/1

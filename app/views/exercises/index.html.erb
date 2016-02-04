@@ -24,6 +24,7 @@
   <tbody>
     <% @exercises.each do |exercise| %>
       <tr>
+        
         <% if exercise.user == current_user %>
         <td><%= exercise.date.strftime("%b %d %Y")%></td>
         <td><%= exercise.exercise %></td>
@@ -38,9 +39,9 @@
     <% end %>
   </tbody>
 </table>
-
+ 
 <br>
-
+ <%= will_paginate %>
 <%= link_to 'New Exercise', new_exercise_path %>
 
 <!--Google adwords-->
