@@ -96,17 +96,17 @@ $(function(){
 
 	//write to Dom
 	orm = Math.round(onerepmax);
-	$('#onerepmax').text(orm); 
+	$('#onerepmax').val(orm); 
 	
 	wowR = Math.round(wow);
-	$('#wow').text(wowR);
+	$('#wow').val(wowR);
 	
 	
 	bwowR = Math.round(bwow);
-	$('#bwow').text(bwowR);
+	$('#bwow').val(bwowR);
 	
 	 
-	if (reps >= 11){
+	if (reps >= 11 || reps == 0){
 			
 			$('.alert').slideDown();
 			$('#try').slideToggle();
