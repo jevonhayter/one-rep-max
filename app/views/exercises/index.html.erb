@@ -25,7 +25,7 @@
     <% @exercises.each do |exercise| %>
       <tr>
         <% if exercise.user == current_user %>
-        <td><%= exercise.date %></td>
+        <td><%= exercise.date.strftime("%b %d %Y")%></td>
         <td><%= exercise.exercise %></td>
         <td><%= exercise.weight %></td>
         <td><%= exercise.reps %></td>

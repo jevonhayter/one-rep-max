@@ -99,6 +99,9 @@ $(function(){
 	orm = Math.round(onerepmax);
 	$('#onerepmax').val(orm); 
 	
+	orm = Math.round(onerepmax);
+	$('#repmax').text(orm); 
+	
 	wowR = Math.round(wow);
 	$('#wow').val(wowR);
 	
