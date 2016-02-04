@@ -62,4 +62,30 @@ background-color:#fff;
 .instructions {
     margin-top:65px;
 }
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+   
+   
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+  
+  @mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+}
  

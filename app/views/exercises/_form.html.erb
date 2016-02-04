@@ -1,3 +1,6 @@
+<div class="row">
+  <div class="col-md-3 col-md-offset-4">
+
 <%= form_for(@exercise) do |f| %>
   <% if @exercise.errors.any? %>
     <div id="error_explanation">
@@ -11,25 +14,25 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%= f.date_select :date, class:'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :exercise %><br>
-    <%= f.text_field :exercise %>
+    <%= f.text_field :exercise, class:'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :weight %><br>
-    <%= f.number_field :weight %>
+    <%= f.number_field :weight, class:'form-control', id:"weight" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :reps %><br>
-    <%= f.number_field :reps %>
+    <%= f.number_field :reps, class:'form-control', id:"reps" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :max %><br>
-    <%= f.number_field :max %>
+    <%= f.number_field :max, class:'form-control' %>
   </div>
   <div class="field">
     <%= f.label :bulk %><br>
@@ -43,7 +46,28 @@
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions" id="submit">
+    <%= f.submit%>
   </div>
 <% end %>
+
+<div class="row text-center space">	
+						  <div id="box1" class="col-md-4 col-sm-4"><h4 class="boxes">Your <em>"One Rep Max"</em></h4>
+						  <h1 id="onerepmax" name="onerepmax">0</h1>
+						  </div>
+						  
+						  <div id="box2" class="col-md-4 col-sm-4"><h4 class="boxes"><em>Work out weight if your toning up</em></h4>
+						  <h1 id="wow" name="wow">0</h1>
+						  </div>
+						   
+						  <div id="box3" class=" col-md-4 col-sm-4"><h4 class="boxes"><em>Work out weight if your bulking up</em></h4> 
+						  <h1 id="bwow" name="bwow">0</h1>
+						  </div>
+						  
+						  	<div>
+						<a href="#" id="history" class="text-center links">History Page</a>
+					</div>
+
+
+</div>
+</div>
