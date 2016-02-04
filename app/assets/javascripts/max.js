@@ -17,7 +17,8 @@ $(function(){
 		
 		if (reps <= 10){
 			
-			$('.space').fadeIn(800);
+			$('.space').fadeIn(400);
+			$('.bye').fadeOut(500);
 			
 			 
 		}   

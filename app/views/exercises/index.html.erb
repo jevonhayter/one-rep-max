@@ -1,11 +1,14 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1"> 
+ 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Exercises</h1>
+<h1 class="text-center">Exercise History</h1>
 
-<table>
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
-      <th>User</th>
+       
       <th>Date</th>
       <th>Exercise</th>
       <th>Weight</th>
@@ -13,7 +16,7 @@
       <th>Max</th>
       <th>Bulk</th>
       <th>Tone</th>
-      <th>User</th>
+       
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,7 +25,6 @@
     <% @exercises.each do |exercise| %>
       <tr>
         <% if exercise.user == current_user %>
-        <td><%=exercise.user.email%></td>
         <td><%= exercise.date %></td>
         <td><%= exercise.exercise %></td>
         <td><%= exercise.weight %></td>
@@ -30,10 +32,7 @@
         <td><%= exercise.max %></td>
         <td><%= exercise.bulk %></td>
         <td><%= exercise.tone %></td>
-        <td><%= exercise.user_id %></td>
-        <td><%= link_to 'Show', exercise %></td>
-        <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
-        <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <%end%>
       </tr>
     <% end %>
@@ -43,3 +42,5 @@
 <br>
 
 <%= link_to 'New Exercise', new_exercise_path %>
+</div>
+</div>
