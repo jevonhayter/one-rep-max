@@ -14,7 +14,8 @@ group :production do
 end
 
 #Use bootstrap library for styles
-gem 'bootstrap-sass', '3.3.1'
+gem 'bootstrap-sass', '3.3.6'
+ 
 
 #Use font-awesome for fonts
 gem 'font-awesome-sass', '4.2.0'
