@@ -26,6 +26,9 @@ gem 'font-awesome-sass', '4.2.0'
 #Use for authentication
 gem 'devise', '3.5.6'
 
+#Use to keep config out of Github
+gem 'figaro', '1.1.1'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.0'
 # Use Uglifier as compressor for JavaScript assets
