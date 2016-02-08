@@ -5,7 +5,8 @@
 
 <h1 class="text-center">Exercise History</h1>
 </br>
- 
+ <%= will_paginate %>
+ </br>
 <% @exercises.each do |exercise| %>
 <ul class="list-group">
   <li class="list-group-item list-group-item-info"><%= exercise.date.strftime("%b %d %Y")%></li>
