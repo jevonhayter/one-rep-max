@@ -15,10 +15,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
 
 
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  host = 'obscure-cove-47194.herokuapp.com'
-  config.action_mailer.default_url_options = { host: host }
+   
   
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
