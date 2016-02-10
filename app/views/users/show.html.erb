@@ -1,53 +1,44 @@
-<div class="row">
-  <div class="col-md-10 col-md-offset-1"> 
- 
 <p id="notice"><%= notice %></p>
 
-<h1 class="text-center">Exercise History</h1>
-</br>
- 
- </br>
- 
-  
-<ul class="list-group">
-  <li class="list-group-item list-group-item-info"><%= @user.exercises.max.date.strftime("%b %d %Y")%></li>
-  <li class="list-group-item">Exercise Performed: <%= @user.exercises.max.exercise %></li>
-  <li class="list-group-item">Weight Used: <%= @user.exercises.max.weight %> lbs.</li>
-  <li class="list-group-item">Number of Reps Performed: <%= @user.exercises.max.reps %> reps</li>
-  <li class="list-group-item list-group-item-success">Your One Rep Max: <%= @user.exercises.max.max %> lbs.</li>
-  <li class="list-group-item">Workout Body Building Weight: <%= @user.exercises.max.bulk %> lbs.</li>
-  <li class="list-group-item">Workout Body Toning Weight: <%= @user.exercises.max.tone %> lbs.</li>
-   
-</ul>
-</br>
-</br>
- 
- 
-<br>
-  
-<%= link_to 'New Exercise', new_user_exercise_path(current_user) %>
+<p>
+  <strong>Date:</strong>
+  <%= @exercise.date %>
+</p>
 
-<!--Google adwords-->
-  <div class="row" id="ads">
-				<div class="col-xs-12 col-md-6 col-md-offset-3">
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-					</script>
-					<!-- OneRepMax -->
-					<ins class="adsbygoogle"
-						 style="display:block"
-						 data-ad-client="ca-pub-0579466747730468"
-						 data-ad-slot="5801665806"
-						 data-ad-format="auto"></ins>
-					<script>
-						(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>
-				</div>
-	</div>
-	
-	
-	
- 
- 
+<p>
+  <strong>Exercise:</strong>
+  <%= @exercise.exercise %>
+</p>
 
-</div>
-</div>
+<p>
+  <strong>Weight:</strong>
+  <%= @exercise.weight %>
+</p>
+
+<p>
+  <strong>Reps:</strong>
+  <%= @exercise.reps %>
+</p>
+
+<p>
+  <strong>Max:</strong>
+  <%= @exercise.max %>
+</p>
+
+<p>
+  <strong>Bulk:</strong>
+  <%= @exercise.bulk %>
+</p>
+
+<p>
+  <strong>Tone:</strong>
+  <%= @exercise.tone %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @exercise.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Back', exercises_path %>

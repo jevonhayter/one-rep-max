@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-  
-   devise_for :users 
-   resources :users do
-      resources :exercises
-    end
-  resources :exercises  
+  devise_for :users
+  resources :exercises
   resources :contacts
   get '/about' => 'pages#about'
   get '/privacy' => 'pages#privacy'
