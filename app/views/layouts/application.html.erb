@@ -39,7 +39,7 @@
           <% if user_signed_in? %>
             <li><%= link_to "New Workout", new_user_exercise_path(current_user) %></li>
             <li><%=  link_to "History", current_user %></li>
-            <li> <%= link_to "current_user_show", current_user %></li>
+            
             <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary navbar-btn' %></li>
           <% else %>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>

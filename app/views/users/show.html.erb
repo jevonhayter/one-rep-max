@@ -8,7 +8,24 @@
  
  </br>
  
- <%= @user %>
+  
+<ul class="list-group">
+  <li class="list-group-item list-group-item-info"><%= @user.exercises.max.date.strftime("%b %d %Y")%></li>
+  <li class="list-group-item">Exercise Performed: <%= @user.exercises.max.exercise %></li>
+  <li class="list-group-item">Weight Used: <%= @user.exercises.max.weight %> lbs.</li>
+  <li class="list-group-item">Number of Reps Performed: <%= @user.exercises.max.reps %> reps</li>
+  <li class="list-group-item list-group-item-success">Your One Rep Max: <%= @user.exercises.max.max %> lbs.</li>
+  <li class="list-group-item">Workout Body Building Weight: <%= @user.exercises.max.bulk %> lbs.</li>
+  <li class="list-group-item">Workout Body Toning Weight: <%= @user.exercises.max.tone %> lbs.</li>
+   
+</ul>
+</br>
+</br>
+ 
+ 
+<br>
+  
+<%= link_to 'New Exercise', new_exercise_path %>
 
 <!--Google adwords-->
   <div class="row" id="ads">
