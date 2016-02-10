@@ -1,44 +1,55 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1"> 
+ 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @exercise.date %>
-</p>
+<h1 class="text-center">Exercise History</h1>
+</br>
+ <%= will_paginate %>
+ </br>
+ 
+ <% @exercises.each do |exercise| %>
+  
+<ul class="list-group">
+  <li class="list-group-item list-group-item-info"><%= exercise.date.strftime("%b %d %Y")%></li>
+  <li class="list-group-item">Exercise Performed: <%= exercise.exercise %></li>
+  <li class="list-group-item">Weight Used: <%= exercise.weight %> lbs.</li>
+  <li class="list-group-item">Number of Reps Performed: <%= exercise.reps %> reps</li>
+  <li class="list-group-item list-group-item-success">Your One Rep Max: <%= exercise.max %> lbs.</li>
+  <li class="list-group-item">Workout Body Building Weight: <%= exercise.bulk %> lbs.</li>
+  <li class="list-group-item">Workout Body Toning Weight: <%= exercise.tone %> lbs.</li>
+  <li class="list-group-item">Delete Workout: <%= link_to 'Delete', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+</ul>
+</br>
+</br>
+<% end %>
+ 
+ 
+<br>
+ <%= will_paginate %>
+<%= link_to 'New Exercise', new_exercise_path %>
 
-<p>
-  <strong>Exercise:</strong>
-  <%= @exercise.exercise %>
-</p>
+<!--Google adwords-->
+  <div class="row" id="ads">
+				<div class="col-xs-12 col-md-6 col-md-offset-3">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+					</script>
+					<!-- OneRepMax -->
+					<ins class="adsbygoogle"
+						 style="display:block"
+						 data-ad-client="ca-pub-0579466747730468"
+						 data-ad-slot="5801665806"
+						 data-ad-format="auto"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+	</div>
+	
+	
+	
+ 
+ 
 
-<p>
-  <strong>Weight:</strong>
-  <%= @exercise.weight %>
-</p>
-
-<p>
-  <strong>Reps:</strong>
-  <%= @exercise.reps %>
-</p>
-
-<p>
-  <strong>Max:</strong>
-  <%= @exercise.max %>
-</p>
-
-<p>
-  <strong>Bulk:</strong>
-  <%= @exercise.bulk %>
-</p>
-
-<p>
-  <strong>Tone:</strong>
-  <%= @exercise.tone %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @exercise.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
-<%= link_to 'Back', exercises_path %>
+</div>
+</div>

@@ -1,15 +1,17 @@
 class ExercisesController < ApplicationController
-  before_action :set_exercise, only: [:show, :edit, :update, :destroy]
+  before_action :set_exercise, only: [:edit, :update, :destroy]
+   
 
   # GET /exercises
   # GET /exercises.json
   def index
-    @exercises = Exercise.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /exercises/1
   # GET /exercises/1.json
   def show
+    @user = User.find(params[:id])
+    @exercises = @user.exercises.order("created_at DESC").paginate(page: params[:page])
   end
 
   # GET /exercises/new
@@ -29,7 +31,7 @@ class ExercisesController < ApplicationController
     respond_to do |format|
       if @exercise.save
         format.html { redirect_to exercises_path, notice: 'Exercise was successfully created.' }
-        format.json { render action: 'index', status: :created, location: @exercise }
+        format.json { render action: 'show', status: :created, location: @exercise }
         
       else
         format.html { render action: 'new' }
@@ -68,6 +70,8 @@ class ExercisesController < ApplicationController
     def set_exercise
       @exercise = Exercise.find(params[:id])
     end
+    
+    
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exercise_params
