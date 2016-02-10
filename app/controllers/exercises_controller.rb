@@ -3,7 +3,7 @@ class ExercisesController < ApplicationController
   
    def new
         @user = User.find( params[:user_id] )
-        @exercise = @user.exercises.build
+        @exercise = Exercise.new
    end
     
     def create
