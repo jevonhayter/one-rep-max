@@ -5,18 +5,18 @@
 
 <h1 class="text-center">Exercise History</h1>
 </br>
-  
+ 
  </br>
  
-<% @exercises.each do |exercise| %>
+<% @exercies.each do |user| %>
 <ul class="list-group">
-  <li class="list-group-item list-group-item-info"><%= exercise.date.strftime("%b %d %Y")%></li>
-  <li class="list-group-item">Exercise Performed: <%= exercise.exercise %></li>
-  <li class="list-group-item">Weight Used: <%= exercise.weight %> lbs.</li>
-  <li class="list-group-item">Number of Reps Performed: <%= exercise.reps %> reps</li>
-  <li class="list-group-item list-group-item-success">Your One Rep Max: <%= exercise.max %> lbs.</li>
-  <li class="list-group-item">Workout Body Building Weight: <%= exercise.bulk %> lbs.</li>
-  <li class="list-group-item">Workout Body Toning Weight: <%= exercise.tone %> lbs.</li>
+  <li class="list-group-item list-group-item-info"><%= user.exercise.date.strftime("%b %d %Y")%></li>
+  <li class="list-group-item">Exercise Performed: <%= user.exercise.exercise %></li>
+  <li class="list-group-item">Weight Used: <%= user.exercise.weight %> lbs.</li>
+  <li class="list-group-item">Number of Reps Performed: <%= user.exercise.reps %> reps</li>
+  <li class="list-group-item list-group-item-success">Your One Rep Max: <%= user.exercise.max %> lbs.</li>
+  <li class="list-group-item">Workout Body Building Weight: <%= user.exercise.bulk %> lbs.</li>
+  <li class="list-group-item">Workout Body Toning Weight: <%= user.exercise.tone %> lbs.</li>
   <li class="list-group-item">Delete Workout: <%= link_to 'Delete', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></li>
 </ul>
 </br>
@@ -24,7 +24,7 @@
 <%end%> 
  
 <br>
- 
+  
 <%= link_to 'New Exercise', new_exercise_path %>
 
 <!--Google adwords-->
