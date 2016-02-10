@@ -1,6 +1,5 @@
 class ExercisesController < ApplicationController
-  before_action :set_exercise, only: [:show, :edit, :update, :destroy]
-
+   before_filter :authenticate_user!
   # GET /exercises
   # GET /exercises.json
   def index
@@ -10,7 +9,9 @@ class ExercisesController < ApplicationController
   # GET /exercises/1
   # GET /exercises/1.json
   def show
+    @exercises = current_user.exercises.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
+  
 
   # GET /exercises/new
   def new
@@ -28,7 +29,8 @@ class ExercisesController < ApplicationController
 
     respond_to do |format|
       if @exercise.save
-        format.html { redirect_to exercises_path, notice: 'Exercise was successfully created.' }
+         flash[:success] = "Exercise Updated!"
+        format.html { redirect_to exercise_path(current_user), notice: 'Exercise was successfully created.' }
         format.json { render action: 'index', status: :created, location: @exercise }
         
       else
@@ -56,9 +58,10 @@ class ExercisesController < ApplicationController
   # DELETE /exercises/1
   # DELETE /exercises/1.json
   def destroy
-    @exercise.destroy
+     @exercise = Exercise.find(params[:id])
+     @exercise.destroy 
     respond_to do |format|
-      format.html { redirect_to exercises_url }
+      format.html { redirect_to exercise_url }
       format.json { head :no_content }
     end
   end

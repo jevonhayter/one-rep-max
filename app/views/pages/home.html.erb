@@ -1,5 +1,5 @@
 <!--Main section for home page-->
-<section>
+ 
 <div class="row" id="top-main">
   <div class="col-md-6 col-xs-12">
       <h1 class="text-center">ONE REP MAX</h1>
@@ -8,95 +8,95 @@
   </div>
   
 	  <!--Home page form-->
-	  <div class="col-md-4 col-md-offset-1 col-xs-12">
-	      <form  id="FormID" class="well">
-			  <div class="form-group">
-				<label for="weight">Weight Used:</label>
-				<input type="text" class="form-control"  id="weight" name="weight" placeholder="Weight">
-			  </div>
-			  
-			  <div class="form-group">
-				<label for="Reps Performed"># of Reps Performed up to 10:</label>
-				<input type="text" class="form-control"   id="reps" name="reps" placeholder="Reps">
-			  </div>
-			  
-			  <div id="box1" class="form-group">
-			   <h4 class="text-center lead">Your one rep max is:</h4>
-				 <h3 id="repmax" name="repmax" class="text-center lead">0</h3>
-			  </div>
-							  
-			  <button type="text" class="btn btn-default btn-block btn-primary" id="submit">One Rep Max</button>
-		  </form>
-	  </div>
- </div> <!--End of Class Row-->  
-</section>
+  <div class="col-md-4 col-md-offset-1 col-xs-12">
+      <form  id="FormID" class="well">
+		  <div class="form-group">
+			<label for="weight">Weight Used:</label>
+			<input type="text" class="form-control"  id="weight" name="weight" placeholder="Weight">
+		  </div>
+		  
+		  <div class="form-group">
+			<label for="Reps Performed"># of Reps Performed up to 10:</label>
+			<input type="text" class="form-control"   id="reps" name="reps" placeholder="Reps">
+		  </div>
+		  
+		  <div id="box1" class="form-group">
+		   <h4 class="text-center lead">Your one rep max is:</h4>
+			 <h3 id="repmax" name="repmax" class="text-center lead">0</h3>
+		  </div>
+						  
+		  <button type="text" class="btn btn-default btn-block btn-primary" id="submit">One Rep Max</button>
+	  </form>
+  </div>
+</div> <!--End of Class Row-->  
+ 
 
 
 <!--Bottom Section for Home Page-->
-<section> 
+ 
+	<div class="row"> 
+    	<div class="col-md-6 col-xs-12 lead">
+    		<p class="instructions lead"><span><b>Instructions:</b></span> This formula works by choosing a weight you <em>do not</em> think you can lift 10 times.</p>
+    		<p class="lead">After your set enter the weight lifted and reps performed. The result will be your estimated one rep max.<p>
+    	 
+    	
+    	<div class="well cta">
+            <p class="lead text-center">Sign up for free and keep track of your workouts.</p>
+            <br/>
+            <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block' %>
+        </div>
+       </div>
 	
-	<div class="col-md-6 col-xs-12 lead">
-		<p class="instructions"><span><b>Instructions:</b></span> This formula works by choosing a weight you <em>do not</em> think you can lift 10 times.</p>
-		<p>After your set enter the weight lifted and reps performed. The result will be your estimated one rep max.</p>
-	 
-	
-	<div class="well cta">
-        <p class="lead text-center">Sign up for free and keep track of your workouts.</p>
-        <br/>
-        <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block' %>
-    </div>
-    
-    </div>
-	
-  <div class="col-md-6 col-xs-12">
-   <h3 class="text-center">Brzycki Formula</h3>
-         <table class="table table-bordered text-center">
-         <tr>
-         <th scope="col" class="text-center"># of Reps Performed</th>
-         <th scope="col" class="text-center">Multilication coefficient</th>
+      <div class="col-md-6 col-xs-12">
+       <h3 class="text-center">Brzycki Formula</h3>
+        <table class="table table-bordered text-center">
+          <tr>
+             <th scope="col" class="text-center"># of Reps Performed</th>
+             <th scope="col" class="text-center">Multilication coefficient</th>
+          </tr>
+          <tr>
+             <td>1</td>
+             <td>1.000</td>
+          </tr>
+          <tr>
+             <td>2</td>
+             <td>1.029</td>
+          </tr>
+          <tr>
+             <td>3</td>
+             <td>1.059</td>
+          </tr>
+          <tr>
+             <td>4</td>
+             <td>1.091</td>
+          </tr>
+          <tr>
+             <td>5</td>
+             <td>1.125</td>
+          </tr>
+          <tr>
+             <td>6</td>
+             <td>1.161</td>
+          </tr>
+          <tr>
+             <td>7</td>
+             <td>1.200</td>
+          </tr>
+          <tr>
+             <td>8</td>
+             <td>1.242</td>
+          </tr>
+          <tr>
+             <td>9</td>
+             <td>1.286</td>
+          </tr>
+          <tr>
+             <td>10</td>
+             <td>1.330</td>
          </tr>
-         <tr>
-         <td>1</td>
-         <td>1.000</td>
-         </tr>
-         <tr>
-         <td>2</td>
-         <td>1.029</td>
-         </tr>
-         <tr>
-         <td>3</td>
-         <td>1.059</td>
-         </tr>
-         <tr>
-         <td>4</td>
-         <td>1.091</td>
-         </tr>
-         <tr>
-         <td>5</td>
-         <td>1.125</td>
-         </tr>
-         <tr>
-         <td>6</td>
-         <td>1.161</td>
-         </tr>
-         <tr>
-         <td>7</td>
-         <td>1.200</td>
-         </tr>
-         <tr>
-         <td>8</td>
-         <td>1.242</td>
-         </tr>
-         <tr>
-         <td>9</td>
-         <td>1.286</td>
-         </tr>
-         <tr>
-         <td>10</td>
-         <td>1.330</td>
-         </tr>
-         </table>
-  </div>
+        </table>
+      </div>
+   </div><!--End of row-->
   
-</section>
+ 
  
