@@ -1,13 +1,11 @@
 class ExercisesController < ApplicationController
    before_filter :authenticate_user!
+  
   # GET /exercises
-  # GET /exercises.json
   def index
-    @exercises = Exercise.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /exercises/1
-  # GET /exercises/1.json
   def show
     @exercises = current_user.exercises.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
@@ -23,47 +21,34 @@ class ExercisesController < ApplicationController
   end
 
   # POST /exercises
-  # POST /exercises.json
   def create
     @exercise = current_user.exercises.build(exercise_params)
 
-    respond_to do |format|
       if @exercise.save
-         flash[:success] = "Exercise Updated!"
-        format.html { redirect_to exercise_path(current_user), notice: 'Exercise was successfully created.' }
-        format.json { render action: 'index', status: :created, location: @exercise }
-        
+         flash[:success] = "Workout Created!"
+         redirect_to exercise_path(current_user) 
       else
-        format.html { render action: 'new' }
-        format.json { render json: @exercise.errors, status: :unprocessable_entity }
-        
+         flash[:danger] = "You must enter weight and reps!"
+        render action: 'new' 
       end
-    end
+      
   end
 
   # PATCH/PUT /exercises/1
-  # PATCH/PUT /exercises/1.json
   def update
-    respond_to do |format|
+     
       if @exercise.update(exercise_params)
-        format.html { redirect_to @exercise, notice: 'Exercise was successfully updated.' }
-        format.json { render action: 'show', status: :ok, location: @exercise }
+         redirect_to @exercise, notice: 'Exercise was successfully updated.'
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @exercise.errors, status: :unprocessable_entity }
+         render action: 'edit' 
       end
-    end
   end
 
   # DELETE /exercises/1
-  # DELETE /exercises/1.json
   def destroy
      @exercise = Exercise.find(params[:id])
      @exercise.destroy 
-    respond_to do |format|
-      format.html { redirect_to exercise_url }
-      format.json { head :no_content }
-    end
+     redirect_to exercise_url 
   end
 
   private

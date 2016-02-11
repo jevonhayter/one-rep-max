@@ -1,3 +1,5 @@
+// Function to calculate one rep max
+
 $(function(){
 	
 	
@@ -5,6 +7,7 @@ $(function(){
 		
 		e.preventDefault();
 		
+		// Variables to hold weights and reps
 		var reps = $('#reps').val();
 		var weight = $('#weight').val();
 		var onerepmax;
@@ -15,16 +18,17 @@ $(function(){
 		var wowR;
 		var bwowR;
 		
+		
+		// Switches from input form to one rep max veiwable form
 		if (reps <= 10){
 			
 			$('.space').fadeIn(400);
 			$('.bye').fadeOut(500);
-			
-			 
 		}   
-		
-		
-		switch (reps) {
+	
+	// Cases to calculate one rep max
+	
+	switch (reps) {
 	
 	case '1':
 	onerepmax = weight * 1.0;
@@ -85,17 +89,17 @@ $(function(){
 	wow = onerepmax * 0.70;
 	bwow = onerepmax * 0.85;
 	break;
-		
+	
 	
 	default:
 	msg = 'Enter Reps Between 1 to 10';
 	break;
-		
+	
 }//End of Switch
 
-		 
-
-	//write to Dom
+	 
+	 
+    //write to Dom
 	orm = Math.round(onerepmax);
 	$('#onerepmax').val(orm); 
 	
@@ -107,36 +111,7 @@ $(function(){
 	
 	
 	bwowR = Math.round(bwow);
-	$('#bwow').val(bwowR);
-	
-	 
-	if (reps >= 11 || reps == 0){
-			
-			$('.alert').slideDown();
-			$('#try').slideToggle();
-			$('#try').on('click', function(e){
-				
-				e.preventDefault();
-				
-				$('.alert').hide();
-				$('#try').hide();
-				$('.space').hide();
-				 
-				$('#reps').focus();
-				
-				$('#reps').val('');
-				
-				 
-				 
-				 
-					
-			});
-			
-			 
-		}   
-	 
-	 
-			 
+	$('#bwow').val(bwowR);	 
 	 		
 	});//end of click function
 	
